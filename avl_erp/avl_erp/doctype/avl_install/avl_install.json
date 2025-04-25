@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-25 22:56:35.663138",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_cbjt",
+  "amended_from",
+  "column_break_wcvu",
+  "dnote",
+  "section_break_eqar",
+  "customer",
+  "technician",
+  "column_break_srnv",
+  "vehicle_plate_number",
+  "doorno",
+  "chasis",
+  "odometer",
+  "section_break_wniw",
+  "scan_imei",
+  "pre_check_inspection_tab",
+  "cxsignature",
+  "cxname",
+  "cxdate",
+  "column_break_ssox",
+  "techsignature",
+  "techname",
+  "techdate",
+  "post_check_inspection_tab",
+  "assigned_to_customer_tenant",
+  "assigned_to_customer_user",
+  "column_break_tywl"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_cbjt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AVL Install",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_wcvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dnote",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Note",
+   "options": "Delivery Note",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_eqar",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "dnote.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Assigned Technician",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_srnv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_plate_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Plate Number"
+  },
+  {
+   "fieldname": "doorno",
+   "fieldtype": "Data",
+   "label": "Vehicle Door Number"
+  },
+  {
+   "fieldname": "chasis",
+   "fieldtype": "Data",
+   "label": "Vehicle Chasis "
+  },
+  {
+   "fieldname": "odometer",
+   "fieldtype": "Int",
+   "label": "Odometer in KM",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wniw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scan_imei",
+   "fieldtype": "Data",
+   "label": "Scan IMEI",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "pre_check_inspection_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pre Check Inspection"
+  },
+  {
+   "fieldname": "cxsignature",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "cxname",
+   "fieldtype": "Data",
+   "label": "Customer SuperVisor"
+  },
+  {
+   "fieldname": "cxdate",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_ssox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "techsignature",
+   "fieldtype": "Signature",
+   "label": "Technician Signature"
+  },
+  {
+   "fetch_from": "technician.employee",
+   "fieldname": "techname",
+   "fieldtype": "Link",
+   "label": "Technician Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "techdate",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "post_check_inspection_tab",
+   "fieldtype": "Tab Break",
+   "label": "Post Check Inspection"
+  },
+  {
+   "default": "0",
+   "fieldname": "assigned_to_customer_tenant",
+   "fieldtype": "Check",
+   "label": "Assigned to Customer Tenant"
+  },
+  {
+   "default": "0",
+   "fieldname": "assigned_to_customer_user",
+   "fieldtype": "Check",
+   "label": "Assigned to Customer User"
+  },
+  {
+   "fieldname": "column_break_tywl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-26 00:57:07.753340",
+ "modified_by": "Administrator",
+ "module": "Avl Erp",
+ "name": "AVL Install",
+ "owner": "m.t.alsaif@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
